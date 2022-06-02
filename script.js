@@ -10,14 +10,15 @@ today.text(dateNow);
 // use local storage to store and retrieve data
 var storage = JSON.parse(localStorage.scheduler || '{}');
 
-
 // changes color depending on row time compared to current time
 var rows = document.getElementsByClassName("row");
 let currentHour = parseInt(moment().format("H"));
 console.log(currentHour)
+
 var pastTense = $(".past");
 var presentTense = $(".present");
 var futureTense = $(".future");
+
 
 Array.from(rows).forEach(row => {
     let
@@ -41,13 +42,21 @@ Array.from(rows).forEach(row => {
 function setColor(element, color) {
     element.style.backgroundColor = color;
 }
-console.log(rows);
 
+// local storage for textarea
+saveButton = document.querySelector("#button");
 
-// practice
-new Date().toLocaleString();
-console.log(new Date)
+saveButton.addEventListener("click", function(event) {
+    event.preventDefault();
 
-$(".saveBtn").button({
-    icons: 'ui-icon-disk'
-    });
+    var input = document.querySelector("#content").value;
+
+    if (input === "") {
+        displayMessage("error, cannot save a blank list");
+    }   else {
+        displayMessage("success", "Saved to your schedule");
+
+        localStorage.setItem("input", textarea);
+    }
+
+})
