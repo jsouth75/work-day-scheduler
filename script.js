@@ -12,13 +12,13 @@ var text = document.getElementsByName("textArea");
 
 for(var i=0; i <10; i++) {
     var value = text[i].getAttribute("value"); 
-    if(currentHour>value) {
+    if(currentHour > value) {
         text[i].classList.add("past");
     } 
     if(currentHour == value) {
         text[i].className="present";
     }
-    if(currentHour<value) {
+    if(currentHour < value) {
         text[i].className="future";
     }
 };
@@ -38,13 +38,13 @@ var btn17 = document.getElementById("button17");
 btn8.addEventListener("click", eight);
 btn9.addEventListener("click", nine);
 btn10.addEventListener("click", ten);
-// btn11.addEventListener("click", eleven);
-// btn12.addEventListener("click", twelve);
-// btn13.addEventListener("click", thirteen);
-// btn14.addEventListener("click", fourteen);
-// btn15.addEventListener("click", fifteen);
-// btn16.addEventListener("click", sixteen);
-// btn17.addEventListener("click", seventeen);
+btn11.addEventListener("click", eleven);
+btn12.addEventListener("click", twelve);
+btn13.addEventListener("click", thirteen);
+btn14.addEventListener("click", fourteen);
+btn15.addEventListener("click", fifteen);
+btn16.addEventListener("click", sixteen);
+btn17.addEventListener("click", seventeen);
 
 // pull data from local storage
 var eight = document.getElementById("eightInput");

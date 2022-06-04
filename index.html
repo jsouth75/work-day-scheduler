@@ -29,9 +29,8 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
- 
-      
+
+      <!-- Time blocks for each hour -->
       <div class="row time-block" id="8">
         <p class="col-1 hour">8am</p>
         <textarea id="eightInput" class="col-10" name="textArea" value="8"></textarea>
@@ -53,7 +52,7 @@
       <div class="row time-block" id="11">
         <p class="col-1 hour">11am</p>
         <textarea id="elevenInput" class="col-10" name="textArea" value="11"></textarea>
-        <button onclick="eleven()" id="butto11" class="col-1 saveBtn">&#128190;</button>
+        <button onclick="eleven()" id="button11" class="col-1 saveBtn">&#128190;</button>
       </div>
 
       <div class="row time-block" id="12">
@@ -98,12 +97,10 @@
 
     </div>
 
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
-    <script>moment().format();</script>
+    <!-- <script>moment().format();</script> -->
 
   </body>
 </html>
