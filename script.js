@@ -5,7 +5,6 @@ var dateNow = moment().format("[Today is] dddd, MMM Do YYYY");
 today.text(dateNow);
 
 // changes color depending on row time compared to current time
-var rows = document.getElementsByClassName("row");
 let currentHour = parseInt(moment().format("H"));
 
 var text = document.getElementsByName("textArea");
@@ -16,10 +15,10 @@ for(var i=0; i <10; i++) {
         text[i].classList.add("past");
     } 
     if(currentHour == value) {
-        text[i].className="present";
+        text[i].classList.add("present");
     }
     if(currentHour < value) {
-        text[i].className="future";
+        text[i].classList.add("future");
     }
 };
 
